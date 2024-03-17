@@ -64,6 +64,11 @@ var (
 				"amd64": "/opt/osxcross/target/bin/o64-clang",
 				"arm64": "/opt/osxcross/target/bin/aarch64-apple-darwin20.2-clang",
 			},
+			"android": {
+				// Android compilers 
+				"amd64": "",
+				"arm64": "/opt/arm/bin/aarch64-linux-android-gcc",
+			},
 		},
 		"darwin": {
 			"windows": {
@@ -85,6 +90,8 @@ var (
 		"linux/amd64":   true,
 		"windows/386":   true,
 		"windows/amd64": true,
+		"android/amd64":  true,
+		"android/arm64":  true,
 	}
 )
 
@@ -99,6 +106,9 @@ const (
 
 	// LINUX OS
 	LINUX = "linux"
+
+	// Android OS
+	ANDROID = "android"
 
 	clientsDirName = "clients"
 	sliversDirName = "slivers"
